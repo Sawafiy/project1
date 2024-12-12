@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock, Alarm, Stopwatch & Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Clock, Alarm, Stopwatch & Timer</h1>
+    
+    <!-- (Menu) -->
+    <div class="menu">
+      <button class="menu-btn" data-section="clock-section">Clock</button>
+      <button class="menu-btn" data-section="alarm-section">Alarm</button>
+      <button class="menu-btn" data-section="stopwatch-section">Stopwatch</button>
+      <button class="menu-btn" data-section="timer-section">Timer</button>
+    </div>
+
+    <!-- (Clock) -->
+    <div class="section" id="clock-section">
+      <h2>Clock</h2>
+      <div id="clock">00:00:00</div>
+    </div>
+
+    <!-- (Alarm) -->
+    <div class="section hidden" id="alarm-section">
+      <h2>Alarm</h2>
+      <input type="time" id="alarm-time">
+      <button id="set-alarm">Set Alarm</button>
+      <div id="alarm-status">No alarm set.</div>
+    </div>
+
+    <!-- (Stopwatch) -->
+    <div class="section hidden" id="stopwatch-section">
+      <h2>Stopwatch</h2>
+      <div id="stopwatch">00:00:00</div>
+      <div class="buttons">
+        <button id="start-stopwatch">Start</button>
+        <button id="reset-stopwatch">Reset</button>
+      </div>
+    </div>
+
+    <!-- (Timer) -->
+    <div class="section hidden" id="timer-section">
+      <h2>Timer</h2>
+      <input type="number" id="timer-hours" placeholder="Hours" min="0">
+      <input type="number" id="timer-minutes" placeholder="Minutes" min="0" max="59">
+      <input type="number" id="timer-seconds" placeholder="Seconds" min="0" max="59">
+      <div class="buttons">
+        <button id="start-timer">Start Timer</button>
+        <button id="stop-timer">Stop Timer</button>
+      </div>
+      <div id="timer-display">00:00:00</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
